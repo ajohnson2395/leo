@@ -18,31 +18,16 @@
       "distribution": "store",
       "ios": {
         "resourceClass": "default",
-        "credentialsSource": "remote",
-        "ascApiKeyPath": "private/AuthKey_${ASC_API_KEY_ID}.p8",
-        "ascApiKeyId": "${ASC_API_KEY_ID}",
-        "ascApiKeyIssuerId": "${ASC_API_KEY_ISSUER_ID}"
-      },
-      "env": {
-        "ASC_API_KEY_ID": "${ASC_API_KEY_ID}",
-        "ASC_API_KEY_ISSUER_ID": "${ASC_API_KEY_ISSUER_ID}",
-        "ASC_API_KEY_CONTENT": "${ASC_API_KEY_CONTENT}",
-        "APPLE_TEAM_ID": "${APPLE_TEAM_ID}",
-        "APPLE_ID": "${APPLE_ID}",
-        "APPLE_APP_SPECIFIC_PASSWORD": "${APPLE_APP_SPECIFIC_PASSWORD}"
+        "credentialsSource": "local"
       }
     }
   },
   "submit": {
     "production": {
       "ios": {
-        "appleId": "${APPLE_ID}",
-        "appleTeamId": "${APPLE_TEAM_ID}"
+        "credentialsSource": "local"
       }
     }
-  },
-  "cli": {
-    "appVersionSource": "remote"
   },
   "hooks": {
     "prebuild": [
